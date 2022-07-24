@@ -4,17 +4,18 @@ const logger = require('morgan')
 const routes = require('./routes')
 const db = require('./db')
 
-// () imports and middleware here ^ ///////
-
-const { MissingEntity, WildAnimal } = require('./models')
+const {
+  CalendarPost,
+  FamilyMember,
+  SocialPost,
+  MemoryPost
+} = require('./models')
 
 const PORT = process.env.PORT || 3001
 
 const app = express()
 
 app.use(express.json())
-
-// app.use() middleware here ^ ///////////////////
 
 app.use('/api', routes)
 
