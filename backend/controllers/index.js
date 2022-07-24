@@ -41,6 +41,16 @@ const getAllPosts = async (req, res) => {
   }
 }
 
+const createNewPost = async (req, res) => {
+  try {
+    const text = req.body
+    const posts = await SocialPost.create(text)
+    res.json(posts)
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+}
+
 const getPostById = async (req, res) => {
   try {
     const { id } = req.params
@@ -100,5 +110,6 @@ module.exports = {
   getPostById,
   getCalById,
   getMemoryById,
-  removePostById
+  removePostById,
+  createNewPost
 }

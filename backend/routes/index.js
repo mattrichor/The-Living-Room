@@ -10,7 +10,8 @@ router.get('/family/:id', controllers.getMemberById)
 router.get('/family/:id/memories', controllers.getAllMem)
 router.get('/calendar', controllers.getAllCal)
 router.get('/posts', controllers.getAllPosts)
+router.post('/posts-new', controllers.createNewPost)
 router.get('/posts/:id', controllers.getPostById)
-router.get('/posts/:id/delete', controllers.removePostById)
+router.delete('/posts/:id/delete', controllers.removePostById)
 
 module.exports = router
