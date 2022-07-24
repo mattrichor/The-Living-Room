@@ -11,5 +11,6 @@ router.get('/family/:id/memories', controllers.getAllMem)
 router.get('/calendar', controllers.getAllCal)
 router.get('/posts', controllers.getAllPosts)
 router.get('/posts/:id', controllers.getPostById)
+router.get('/posts/:id/delete', controllers.removePostById)
 
 module.exports = router

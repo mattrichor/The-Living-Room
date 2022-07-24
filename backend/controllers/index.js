@@ -51,6 +51,16 @@ const getPostById = async (req, res) => {
   }
 }
 
+const removePostById = async (req, res) => {
+  try {
+    const { id } = req.params
+    const selPost = await SocialPost.deleteOne(id)
+    return res.json({ selPost })
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+}
+
 const getCalById = async (req, res) => {
   try {
     const { id } = req.params
@@ -89,5 +99,6 @@ module.exports = {
   getMemberById,
   getPostById,
   getCalById,
-  getMemoryById
+  getMemoryById,
+  removePostById
 }

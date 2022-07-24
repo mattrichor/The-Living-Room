@@ -7,7 +7,12 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 const main = async () => {
   const posts = [
     {
-      //array of data goes here
+      title: `Grandpa George's Memorial`,
+      author: 'Matthew Geyer',
+      description:
+        'was great to see everyone, even if under these circumstances',
+      time: 32,
+      likes: 0
     }
   ]
 
