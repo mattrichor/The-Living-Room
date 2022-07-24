@@ -1,8 +1,8 @@
 
 
 
-# Project Title
-The-Living-Room: A localized social app for families.
+# The-Living-Room
+A localized social app for families.
 ## Date: 7/23/2022
 ### Author: Matthew Geyer
 
