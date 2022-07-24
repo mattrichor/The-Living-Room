@@ -11,7 +11,7 @@ A localized social app for families.
 ***
 
 ### ***Description***
-A localozized social app for families to share things most important to them: pictures, recipes, memories, & plans. Will have a family tree lineage space to see pictures of ancestors, & be easy to navigate & simple with the intent of it being used regularly by older folk who didn't grow up with technology. Will have a calendar for family events. 
+A localized social app for families to share things most important to them: pictures, recipes, memories, & plans. Will have a family tree lineage space to see pictures of ancestors, & be easy to navigate & simple with the intent of it being used regularly by older folk who didn't grow up with technology. Stretch goals include having a calendar for family events, and the ability to make a new account. 
 ***
 
 ### ***Technologies Used***
@@ -29,7 +29,7 @@ A localozized social app for families to share things most important to them: pi
 ***
 
 ##### Wireframe
-link here: (https://wireframe.cc/pro/pp/8dacb167c563295)
+link here: (https://app.diagrams.net/#G1vQgPdJIvNU_WUQHBcMJXw6_7z_3P6RHo)
 
 ***
 ### ***Screenshots***
@@ -37,7 +37,7 @@ link here: (https://wireframe.cc/pro/pp/8dacb167c563295)
 ***
 ### ***Task Lists***
 ## Trello Board
-link here: (https://trello.com/b/ofKTtual/segmnt-slayr)
+link here: ()
 - [ ] Backend with Multiple Profiles for Family,
     - [ ] Contents include: Birthday(populates on calendar), picture, brief info, place to share fun anecdotes / memories
 - [ ] Social space for posts (living room)
@@ -49,8 +49,6 @@ link here: (https://trello.com/b/ofKTtual/segmnt-slayr)
 ### ***Credits***
 
 - ME (this is my megalomaniac arc)
-- Everyone at General Assembly who put up with my endless questions & helped me solve complex issues, Y'all are the real MVPs <3
-
 
 
 

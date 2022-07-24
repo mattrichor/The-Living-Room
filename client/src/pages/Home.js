@@ -46,11 +46,11 @@ const Home = () => {
                   navigate(`/${result._id}`)
                 }}
                 image={result.image}
-                name={result.name}
-                age={result.age}
+                title={result.title}
+                author={result.author}
                 description={result.description}
-                timeMissing={result.timeMissing}
-                isHuman={result.isHuman}
+                time={result.time}
+                likes={result.likes}
               />
             </div>
           ))}
