@@ -7,7 +7,7 @@ const SocialPost = new Schema(
     image: { type: String, required: false },
     description: { type: String, required: false },
     author: { type: String, required: true },
-    time: { type: Number, required: true },
+    time: { type: String, required: true },
     likes: { type: Number, required: true }
   },
   { timestamps: true }
