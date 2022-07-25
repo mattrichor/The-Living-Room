@@ -26,7 +26,7 @@ const Home = () => {
       <div className="post-fields">
         <NewPostForm />
         <h2 className="missing-title">Feed</h2>
-        <section className="entity-grid">
+        <section className="post-grid">
           {posts.map((result) => (
             <div key={result._id}>
               <PostCard

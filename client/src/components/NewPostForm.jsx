@@ -41,7 +41,7 @@ const NewPostForm = (props) => {
 <div> <h2>New Post</h2>
   <form onSubmit={(e) => createNewpost(e)}>
     <input
-    className='post-title'
+    className='post-title-input'
       type="text"
       value={title}
       placeholder="Title"
@@ -49,7 +49,7 @@ const NewPostForm = (props) => {
     ></input>
     <br></br>
     <input
-    className='post-author'
+    className='post-author-input'
       type="text"
       value={author}
       placeholder="Author"
@@ -57,7 +57,7 @@ const NewPostForm = (props) => {
     ></input>
     <br></br>
     <input
-    className='post-description'
+    className='post-description-input'
       type="text"
       value={description}
       placeholder="Description"

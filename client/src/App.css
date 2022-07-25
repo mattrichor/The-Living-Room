@@ -13,17 +13,27 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+header {
+  background-color:#3f4022;
+  text-align: center;
+  font-weight: bold;
+  text-decoration: none;
   color: white;
+  padding: 10px;
+  padding-bottom:1px;
+  margin-bottom: 0px;
 }
 
+
+nav{
+  padding-bottom: 0;
+  color: white;
+  text-decoration: none;
+  padding-right: 20px;
+  position: relative;
+  bottom: 5px;
+
+}
 .App-link {
   color: #61dafb;
 }
@@ -36,3 +46,25 @@
     transform: rotate(360deg);
   }
 }
+
+.posts {
+  background-color: #f1f1f1;
+}
+
+.post-title {
+  background-color: #dac4b3;
+}
+
+.post-grid {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+/* HEXES:
+Pale green: #dde7dd
+Earth green: #6a8f6b
+Midnight blue: #221c42
+Pale: #ffe0c9
+White: #ffffff
+*/

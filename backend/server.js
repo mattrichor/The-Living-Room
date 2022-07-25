@@ -18,6 +18,7 @@ app.use(
 app.use(express.json())
 
 app.use('/api', routes)
+
 app.use(cors())
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
