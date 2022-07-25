@@ -2,9 +2,11 @@ import { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import axios from 'axios'
 import PostCard from '../components/PostCard'
+import NewPostForm from '../components/NewPostForm'
 
 const Home = () => {
   const [posts, setPosts] = useState([])
+  const [posted, togglePosted] = useState(false)
   const [newPost, setNewPost] = useState({
     title: '',
     image: '',
@@ -27,28 +29,18 @@ const Home = () => {
     getPosts()
   }, [])
 
-  const handleInput = (event) => {
-    event.preventDefault()
+  const handleChange = (e) => {
+    e.preventDefault()
+    setNewPost({
+      ...newPost,
+      [e.target.name]: e.target.value
+    })
   }
 
-  // const handleChange = (e) => {
-  //   const value = e.target.value
-  //   setNewPostData({
-  //     ...newPostData,
-  //     [e.target.name]: value
-  //   })
-  // }
   const handleSubmit = async (e) => {
     e.preventDefault()
-    const newPostData = {
-      title: 'title test',
-      author: 'Matthew Geyer',
-      description: 'this is a new post!',
-      time: 32,
-      likes: 0
-    }
     await axios
-      .post(`${BASE_URL}/posts-new`, JSON.toStringify(newPostData))
+      .post(`${BASE_URL}/posts-new`, JSON.stringify(newPost))
       .then((response) => {
         console.log(response.status)
         console.log(response.data.token)
@@ -71,11 +63,14 @@ const Home = () => {
 
   return (
     <div>
-      <h1 className="title">Five Flags</h1>
-      <div className="missing-form"></div>
-      <div className="entities">
-        <button onClick={handleSubmit}>POST POST</button>
-        <h2 className="missing-title">Missing Entities</h2>
+      <h1 className="title">The Living Room</h1>
+      <div className="post-fields">
+        <NewPostForm
+          onSubmit={handleSubmit}
+          newPost={newPost}
+          onChange={handleChange}
+        />
+        <h2 className="missing-title">Feed</h2>
         <section className="entity-grid">
           {posts.map((result) => (
             <div key={result._id}>

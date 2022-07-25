@@ -6,8 +6,8 @@ const PostCard = (props) => {
         </div>
         <div className="info-wrapper flex-col">
           <h2>{props.title}</h2>
-          <p class="author"> by {props.author}</p>
-          <h3 class='text'> {props.description}</h3>
+          <p className="author"> by {props.author}</p>
+          <h3 className='text'> {props.description}</h3>
           <p>Likes: {props.likes}</p>
         </div>
       </div>
