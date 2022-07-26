@@ -7,7 +7,8 @@ const CalendarPost = new Schema(
     eventDate: { type: String, required: true },
     eventLocation: { type: String, required: true },
     eventDescription: { type: String, required: true },
-    eventTime: { type: String, required: false }
+    eventTime: { type: String, required: false },
+    gem: { type: Number, required: true }
   },
   { timestamps: true }
 )

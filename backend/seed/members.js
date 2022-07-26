@@ -24,7 +24,8 @@ const main = async () => {
         'He died of a heart attack in a hospital elevator at age 71 when visiting his first great-grandson in Waterbury, CT.'
       ],
       children: [], //make key tags for each family member
-      siblings: []
+      siblings: [],
+      gen: 1
     },
     {
       name: 'Mabel Vera Simpson',
@@ -43,7 +44,69 @@ const main = async () => {
         'She survived breast cancer in 1946 and passed at age 84 in 1978 from heart failure.'
       ],
       children: [], //make key tags for each family member
-      siblings: []
+      siblings: [],
+      gen: 1
+    },
+    {
+      name: 'Patricia (Pat) Hawkins',
+      birthday: 'September 19, 1892',
+      deathday: '',
+      isAlive: true,
+      proPic: '',
+      about:
+        'Born in Cold Spring village in Putnam, New York. Henry dropped out of school to help support his family.. He traveled with his dad where the jobs were. In his teens he one time helped build the railroad in Ohio.A carpenter by trade Henry worked on the Franklin Delano Roosevelt Library in Hyde Park , NY and eventually worked as a salesman and building consultant for a lumber company in Waterbury, CT',
+      images: [],
+      memories: [
+        'He stood at a stout 5 foot 2, while his wife Mabel was 5 foot 9.',
+        'Around 1915 he lived in a boarding house in Hyde Park, N.Y. where he met his future wife, Mable Simpson. Henry entered the Army in WWI and served in trenches as seen in movie 1919 where he contracted tuberculosis and was not expected to live.',
+        'On December 22, 1919 he was married in Connecticut. He and his wife lived in Thomaston and Plymouth, CT. One of the rooms Henry added on their home in Plymouth had windows on 3 sides for fresh air sleeping.',
+        'The family raised chickens and turkeys and planted a garden during WWII.',
+        'Often called ‘Hank” he had a remarkable sense of humor and was amazingly resilient - surviving diphtheria as a young man and a colostomy in 1952.',
+        'He died of a heart attack in a hospital elevator at age 71 when visiting his first great-grandson in Waterbury, CT.'
+      ],
+      children: [], //make key tags for each family member
+      siblings: [],
+      gen: 2
+    },
+    {
+      name: 'George Arthur Geyer',
+      birthday: 'May 14, 1935',
+      deathday: 'September 20th, 2021',
+      isAlive: false,
+      proPic: '',
+      about:
+        'A handyman all of his life. A lifelong teacher, learner, and provider. Worked as professor & spent his free time sailing, flying, and working on model airplanes.',
+      images: [],
+      memories: [],
+      children: [], //make key tags for each family member
+      siblings: [],
+      gen: 2
+    },
+    {
+      name: 'Greg Arthur Geyer',
+      birthday: 'July 29, 1961',
+      deathday: '',
+      isAlive: true,
+      proPic: '',
+      about: '',
+      images: [],
+      memories: [],
+      children: [], //make key tags for each family member
+      siblings: [],
+      gen: 3
+    },
+    {
+      name: 'Cindy Johnson Geyer',
+      birthday: 'July 31, 1961',
+      deathday: '',
+      isAlive: true,
+      proPic: '',
+      about: '',
+      images: [],
+      memories: [],
+      children: [], //make key tags for each family member
+      siblings: [],
+      gen: 3
     }
   ]
 

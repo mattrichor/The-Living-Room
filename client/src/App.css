@@ -149,3 +149,28 @@ Midnight blue: #221c42
 Pale: #ffe0c9
 White: #ffffff
 */
+
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+canvas {
+  position: absolute;
+  background: black;
+  width: 100%;
+  height: 100%
+}
+
+.tree-gen-button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  position: absolute;
+  left: 0;
+  bottom: 5%;
+  z-index: 10;
+  left: 50%;
+  transform: translate(-50%,0);
+  padding: 20px 30px;
+}

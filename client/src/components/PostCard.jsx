@@ -42,14 +42,12 @@ const PostCard = () => {
   const newDescription = createRef()
 
   const saveUpdate = (_id) => {
-    // setUpdatedTitle(newTitle.current.value)
-    // setUpdatedDesc(newDescription.current.value)
     setEdit(false)
     console.log(_id)
     updatePost(_id, newTitle.current.value, newDescription.current.value)
   }
  
-
+  
   const updatePost = async (_id, title, description) => {
     let res = await axios.put(`${BASE_URL}/update-post/${_id}`, {title, description})
     .then((res) => {

@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
 //Page imports here
 import Header from './components/Header'
+import FamilyTree from './pages/FamilyTree'
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/posts" />
           <Route path="/calendar" />
-          <Route path="/tree" />
+          <Route path="/tree" element={<FamilyTree />} />
         </Routes>
       </main>
     </div>
