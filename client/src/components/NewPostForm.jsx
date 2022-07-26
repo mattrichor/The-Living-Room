@@ -19,12 +19,9 @@ const NewPostForm = () => {
 
 
   const createNewpost = async (e) => {
-    let now = new Date().toDateString()
     e.preventDefault()
-    console.log(time)
-    setTime(now)
     await axios
-      .post(`${BASE_URL}/posts-new`, {title, description, author, likes, time})
+      .post(`${BASE_URL}/posts-new`, {title, description, author, likes, time: new Date().toDateString()})
       .then((res) => {
         console.log(res.status)
         setTitle('')

@@ -61,12 +61,10 @@ grid-column: 2;
 }
 
 .feed {
-  margin-top: -50%;
   grid-column: 1;
 }
 
 .grid-post {
-  margin-top: -40%;
   grid-column: 1;
 }
 
@@ -101,6 +99,48 @@ grid-column: 2;
 .post-text {
   margin-top: 5px;
 }
+
+.delete {
+width: 40px;
+font-size: 12px;
+font-weight: bold;
+color: grey;
+border: none;
+background-color: transparent;
+border-radius: 3rem;
+cursor: pointer;
+position: relative;
+left: 190px;
+bottom: 60px;
+}
+
+.delete:hover {
+  background-color:rgb(176, 19, 19);
+}
+
+.post-title, .post-author {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 3%;
+  text-align: left;
+}
+
+
+
+.title-grid {
+  display: grid;
+  grid-template-columns: 8fr 1fr;
+}
+
+.menu {
+  grid-column: 2;
+}
+
+.post-title {
+  margin-left: 15%;
+  grid-column: 1;
+}
+
 
 /* HEXES:
 Pale green: #dde7dd

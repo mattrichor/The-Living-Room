@@ -63,8 +63,7 @@ const getPostById = async (req, res) => {
 
 const updatePostById = async (req, res) => {
   try {
-    const { text } = req.body
-    const selPost = await SocialPost.findByIdAndUpdate(req.params.id, { text })
+    const selPost = await SocialPost.findByIdAndUpdate(req.params.id, req.body)
     if (!selPost) {
       res.status(500).send('Post not found!')
     }
