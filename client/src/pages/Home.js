@@ -26,23 +26,24 @@ const Home = () => {
       <div className="post-fields">
         <NewPostForm />
         <h2 className="missing-title">Feed</h2>
-        <section className="post-grid">
-          {posts.map((result) => (
-            <div key={result._id}>
-              <PostCard
-                onClick={() => {
-                  navigate(`/${result._id}`)
-                }}
-                image={result.image}
-                title={result.title}
-                author={result.author}
-                description={result.description}
-                time={result.time}
-                likes={result.likes}
-              />
-            </div>
-          ))}
-        </section>
+        <div className="grid-main">
+          <section className="grid-post">
+            {posts.map((result) => (
+              <div key={result._id}>
+                <PostCard
+                  _id={result._id}
+                  image={result.image}
+                  title={result.title}
+                  author={result.author}
+                  description={result.description}
+                  time={result.time}
+                  likes={result.likes}
+                />
+              </div>
+            ))}
+          </section>
+          <section className="grid-cal"></section>
+        </div>
       </div>
     </div>
   )

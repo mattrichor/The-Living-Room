@@ -4,7 +4,7 @@ import axios from 'axios'
 
 
 
-const NewPostForm = (props) => {
+const NewPostForm = () => {
 
   const [title, setTitle] = useState("")
   const [author, setAuthor] = useState("")

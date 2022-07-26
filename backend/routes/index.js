@@ -12,6 +12,7 @@ router.get('/calendar', controllers.getAllCal)
 router.get('/posts', controllers.getAllPosts)
 router.post('/posts-new', controllers.createNewPost)
 router.get('/posts/:id', controllers.getPostById)
-router.delete('/posts/:id/delete', controllers.removePostById)
+router.delete('/delete-post/:id', controllers.removePostById)
+router.put('/update-post/:id', controllers.updatePostById)
 
 module.exports = router

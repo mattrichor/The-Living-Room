@@ -61,11 +61,24 @@ const getPostById = async (req, res) => {
   }
 }
 
+const updatePostById = async (req, res) => {
+  try {
+    const { text } = req.body
+    const selPost = await SocialPost.findByIdAndUpdate(req.params.id, { text })
+    if (!selPost) {
+      res.status(500).send('Post not found!')
+    }
+    return res.status(200).json(selPost)
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+}
+
 const removePostById = async (req, res) => {
   try {
     const { id } = req.params
-    const selPost = await SocialPost.deleteOne(id)
-    return res.json({ selPost })
+    const selPost = await SocialPost.findByIdAndDelete(id)
+    return res.status(201).send('post deleted')
   } catch (error) {
     return res.status(500).send(error.message)
   }
@@ -111,5 +124,6 @@ module.exports = {
   getCalById,
   getMemoryById,
   removePostById,
-  createNewPost
+  createNewPost,
+  updatePostById
 }

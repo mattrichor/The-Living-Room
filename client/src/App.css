@@ -55,10 +55,24 @@ nav{
   background-color: #dac4b3;
 }
 
-.post-grid {
+.grid-main {
   text-align: center;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 2fr 1fr;
+
+}
+/* .post-card {
+  margin-bottom: -8.5%;
+} */
+
+/* .time, .post-author {
+  margin: ;
+} */
+
+.post-author {
+}
+.post-text {
+  margin-top: 5px;
 }
 
 /* HEXES:
