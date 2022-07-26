@@ -11,15 +11,6 @@ const Home = () => {
 
   const BASE_URL = 'http://localhost:3001/api'
 
-  useEffect(() => {
-    const getPosts = async () => {
-      const res = await axios.get(`${BASE_URL}/posts`)
-      console.log(res)
-      setPosts(res.data)
-    }
-    getPosts()
-  }, [])
-
   return (
     <div>
       <h1 className="title">The Living Room</h1>
@@ -28,19 +19,7 @@ const Home = () => {
         <h2 className="missing-title">Feed</h2>
         <div className="grid-main">
           <section className="grid-post">
-            {posts.map((result) => (
-              <div key={result._id}>
-                <PostCard
-                  _id={result._id}
-                  image={result.image}
-                  title={result.title}
-                  author={result.author}
-                  description={result.description}
-                  time={result.time}
-                  likes={result.likes}
-                />
-              </div>
-            ))}
+            <PostCard />
           </section>
           <section className="grid-cal"></section>
         </div>

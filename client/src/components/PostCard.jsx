@@ -6,32 +6,53 @@ const BASE_URL = 'http://localhost:3001/api'
 
 
 
+
+
 const PostCard = (props) => {
 
-  let id = props._id
-  const deletePost = async () => {
-    let res = await axios.delete(`${BASE_URL}/delete-post/${id}`)
+  const [posts, setPosts] = useState([])
+  const [posted, togglePosted] = useState(false)
+
+  useEffect(() => {
+    const getPosts = async () => {
+      const res = await axios.get(`${BASE_URL}/posts`)
+      console.log(res)
+      setPosts(res.data)
+    }
+    getPosts()
+  }, [posted === true])
+
+
+
+  const deletePost = async (_id) => {
+    let res = await axios.delete(`${BASE_URL}/delete-post/${_id}`)
     .then((res) => {
       console.log(res.status)
       console.log(res.data.token)
+      togglePosted(true)
     })
   }
+ 
 
 
     return (
       <div className="post-card">
-        <div className="img-wrapper">
-          <img className="img"src={props.image} alt={""} />
+        {posts.map((result) => (
+          <div key={result._id}>
+            <div className="img-wrapper">
+              <img className="img"src={result.image} alt={""} />
+            </div>
+            <div className="posts flex-col">
+              <h2 className="post-title">{result.title}</h2>
+              <p className="post-author"> by {result.author}</p>
+              <h6 className="time">{result.time}</h6>
+              <p className='post-text'> {result.description}</p>
+              <p>Likes: {result.likes}</p>
+              <button className="update" onClick={""}></button>
+              <button className="delete" onClick={() =>deletePost(result._id)}>X</button>
+            </div>
         </div>
-        <div className="posts flex-col">
-          <h2 className="post-title">{props.title}</h2>
-          <p className="post-author"> by {props.author}</p>
-          <h6 className="time">{props.time}</h6>
-          <p className='post-text'> {props.description}</p>
-          <p>Likes: {props.likes}</p>
-          <button className="update" onClick={""}></button>
-          <button className="delete" onClick={deletePost}>X</button>
-        </div>
+         ))}
       </div>
     )
   }

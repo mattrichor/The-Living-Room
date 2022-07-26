@@ -1,14 +1,16 @@
 import { Link } from 'react-router-dom'
 const Header = () => {
   return (
-    <header className="header">
-      <nav>
-        <Link className="home" to='/'><span>Home</span></Link>
-        <Link className='posts' to='/posts'><span>Posts</span></Link>
-        <Link className='calendar' to='/calendar'><span>Calendar</span></Link>
-        <Link className='family-tree' to='/tree'><span>Family Tree</span></Link>
-      </nav>
-    </header>
+    <div className='header-container'>
+      <header className="header">
+        <nav>
+          <Link className="nav" to='/'><span>Home</span></Link>
+          <Link className='nav' to='/posts'><span>Posts</span></Link>
+          <Link className='nav' to='/calendar'><span>Calendar</span></Link>
+          <Link className='nav' id='tree-nav' to='/tree'><span>Family Tree</span></Link>
+        </nav>
+      </header>
+      </div>
   )
 }
 export default Header

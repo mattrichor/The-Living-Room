@@ -12,7 +12,6 @@ const NewPostForm = () => {
   const [likes, setLikes] = useState(0)
   const [time, setTime] = useState('')
 
-
   const [posted, togglePosted] = useState(false)
 
 
@@ -20,20 +19,20 @@ const NewPostForm = () => {
 
 
   const createNewpost = async (e) => {
-    e.preventDefault()
     let now = new Date().toDateString()
+    e.preventDefault()
     console.log(time)
     setTime(now)
     await axios
       .post(`${BASE_URL}/posts-new`, {title, description, author, likes, time})
       .then((res) => {
         console.log(res.status)
-        console.log(res.data.token)
         setTitle('')
         setAuthor('')
         setDescription('')
         setLikes(0)
         setTime('')
+        togglePosted(true)
       })
   }
 
