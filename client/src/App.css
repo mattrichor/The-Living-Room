@@ -24,18 +24,50 @@ header {
   margin-bottom: 0px;
 }
 
-
-.nav{
-  padding-bottom: 0;
-  color: white;
-  text-decoration: none;
-  padding-right: 20px;
-  position: relative;
-  bottom: 5px;
-
+.header-container {
+  background-color:#3f4022;
+  display: flex;
+justify-content: flex-end;
 }
+.nav{
+  padding: 1rem;
+  font-size: px;
+  text-decoration: none;
+  color: #f1f1f1;
+  margin-left: 15px;
+}
+
+.nav:hover {
+  background-color: #221c42;
+}
+
 .App-link {
   color: #61dafb;
+}
+
+.title {
+  text-align: center;
+}
+
+.grid-main {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.grid-form {
+
+grid-column: 2;
+}
+
+.feed {
+  margin-top: -50%;
+  grid-column: 1;
+}
+
+.grid-post {
+  margin-top: -40%;
+  grid-column: 1;
 }
 
 @keyframes App-logo-spin {
@@ -55,12 +87,7 @@ header {
   background-color: #dac4b3;
 }
 
-.grid-main {
-  text-align: center;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
 
-}
 /* .post-card {
   margin-bottom: -8.5%;
 } */

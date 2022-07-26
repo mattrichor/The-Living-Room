@@ -8,7 +8,7 @@ const BASE_URL = 'http://localhost:3001/api'
 
 
 
-const PostCard = (props) => {
+const PostCard = () => {
 
   const [posts, setPosts] = useState([])
   const [posted, togglePosted] = useState(false)
@@ -28,7 +28,6 @@ const PostCard = (props) => {
     let res = await axios.delete(`${BASE_URL}/delete-post/${_id}`)
     .then((res) => {
       console.log(res.status)
-      console.log(res.data.token)
       togglePosted(true)
     })
   }
