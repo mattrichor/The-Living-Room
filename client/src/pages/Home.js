@@ -15,9 +15,7 @@ const Home = () => {
     <div>
       <h1 className="title">The Living Room</h1>
       <div className="grid-main">
-        <section className="grid-form">
-          <NewPostForm />
-        </section>
+        <section className="grid-form"></section>
         <h2 className="Feed">Feed</h2>
         <section className="grid-post">
           <Posts />

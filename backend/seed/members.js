@@ -53,7 +53,8 @@ const main = async () => {
       birthday: 'September 19, 1892',
       deathday: '',
       isAlive: true,
-      proPic: '',
+      proPic:
+        '/Users/mattrichor/Desktop/GA/projects/The-Living-Room/backend/pictures/pat.jpeg',
       about:
         'Talented, strong, smart, short - always giving unconditional love.',
       images: [],
@@ -80,6 +81,77 @@ const main = async () => {
       children: [], //make key tags for each family member
       siblings: [],
       gen: 2,
+      partner: ''
+    },
+    {
+      name: 'John Wilford Johnson, Jr',
+      birthday: 'October 24, 1935',
+      deathday: 'May 18, 2021',
+      isAlive: false,
+      proPic: '',
+      about:
+        'Chemical engineer at DuPont for his entire career. Switched to a computer engineer back when a computer took up an entire room and used punch cards! An only child, he learned to share his heart with his 3 daughters and supported their athletic and extracurricular efforts',
+      images: [],
+      memories: [
+        `Married his high school sweetheart Phyllis who remained the love of his life and partner until his untimely passing during the covid pandemic`,
+        `Known for his belief that rational discourse could settle the most heated of disagreements; his willingness to lend a helping hand and provide an answer on a variety of topics; his love of singing (barbershop, large chorus and church), golf and the beach.`
+      ],
+      children: [], //make key tags for each family member
+      siblings: [],
+      gen: 2,
+      partner: ''
+    },
+    {
+      name: 'Pyllis Gail Johnson',
+      birthday: 'April 20, 1936',
+      deathday: '',
+      isAlive: true,
+      proPic: '',
+      about:
+        'Valedictorian, mother of 3, channeled her intellect into managing the finances of the home, being president of the PTA and other community organizations, active in the church, sharing her cookie baking talents and instilling in her daughters the importance of education, kindness and manners',
+      images: [],
+      memories: [
+        `Fond memories of her smiles when she was holding her new grandsons`
+      ],
+      children: [], //make key tags for each family member
+      siblings: [],
+      gen: 2,
+      partner: ''
+    },
+    {
+      name: 'Julie Olszko',
+      birthday: 'May 16, 1958',
+      deathday: '',
+      isAlive: true,
+      proPic: '',
+      about:
+        'Worked as an occupational therapist with young children until her retirement- I could always hear how much she cared about her patients when she talked with fondness about their stories and how they changed over the years',
+      images: [],
+      memories: [
+        `Tolerated her bratty younger sister (me) trying to hang with her and her friends, used to read to mewhen I was little. I was in awe of how much more grown up and cool she always seemed than me. - Written by Cindy Geyer`,
+        `In the last year has taken on the responsibility of caring for mom and has done so with grace and humor and love`
+      ],
+      children: [], //make key tags for each family member
+      siblings: [],
+      gen: 3,
+      partner: ''
+    },
+    {
+      name: 'Catherine Dison',
+      birthday: 'June 20, 1966',
+      deathday: '',
+      isAlive: true,
+      proPic: '',
+      about:
+        'HS English teacher- lover of language and literature, passionate about fairness toward others who are marginalized, delights in her idiosyncrasies that provide a space for others (students) to feel OK about their own uniqueness, a most avid Beatles fan.',
+      images: [],
+      memories: [
+        `As a young child she was very close to Julie. As the third girl out of three, it always seemed she could get away with more than her older siblings! - Written by Cindy Geyer`,
+        `Fond memories of music- great example the trash song written and sung with her nephews on vacation at the beach house`
+      ],
+      children: [], //make key tags for each family member
+      siblings: [],
+      gen: 3,
       partner: ''
     },
     {
