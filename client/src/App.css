@@ -64,9 +64,7 @@ justify-content: flex-end;
 grid-column: 2;
 }
 
-.feed {
-  grid-column: 1;
-}
+
 
 .grid-post {
   grid-column: 1;
@@ -102,7 +100,7 @@ grid-column: 2;
   margin-top: 5px;
 }
 
-.delete {
+.delete, .update{
 width: 40px;
 font-size: 12px;
 font-weight: bold;
@@ -112,13 +110,36 @@ background-color: transparent;
 border-radius: 3rem;
 cursor: pointer;
 position: relative;
-left: 190px;
-bottom: 60px;
+}
+
+.save-edits {
+  width: 40px;
+font-size: 12px;
+font-weight: bold;
+color: grey;
+border: none;
+background-color: transparent;
+cursor: pointer;
+}
+
+.update:hover {
+  background-color: #3f4022;
 }
 
 .delete:hover {
   background-color:rgb(176, 19, 19);
 }
+
+.pro-pic {
+  border-radius: 3rem;
+  border: #221c42;
+  width: 12%;
+  min-width: 60px;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: -45px;
+}
+
 
 .post-title, .post-author {
   display: flex;
@@ -131,12 +152,22 @@ bottom: 60px;
 
 .title-grid {
   display: grid;
-  grid-template-columns: 8fr 1fr;
+  grid-template-columns: 8fr 2fr;
   background-color: #dac4b3;
+  max-height: 80px;
 }
 
 .menu {
   grid-column: 2;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.dropdown {
+  display: flex;
+  justify-content: center;
+  
 }
 
 .post-title {
@@ -170,6 +201,7 @@ canvas {
   border: none;
   background-color: #dac4b3;
   font-size: larger;
+  max-height: 80px;
 }
 .menu:hover {
   font-size: x-large;

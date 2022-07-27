@@ -4,6 +4,7 @@ import axios from "axios"
 import PostCard from "./PostCard"
 
 
+
 const BASE_URL = 'http://localhost:3001/api'
 
 
@@ -30,7 +31,7 @@ const Post = () => {
     getPosts()
   }, [posted === true])
 
-const showMenu = () => {}
+
 
   const deletePost = async (_id) => {
     let res = await axios.delete(`${BASE_URL}/delete-post/${_id}`)
@@ -39,11 +40,6 @@ const showMenu = () => {}
       togglePosted(true)
     })
   }
-
- 
-  
-
-
 
     return (
       <div className="post-card">
@@ -56,9 +52,10 @@ const showMenu = () => {}
             time={res.time}
             description={res.description}
             _id={res._id}
+            likes={res.likes}
             deletePost={() => deletePost(res._id)}
             // updatePost={() => updatePost(res._id)}
-            showMenu={() => showMenu(res._id)}
+            togglePosted={() => togglePosted()}
             ></PostCard>
          ))}
       </div>
