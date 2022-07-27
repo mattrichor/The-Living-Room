@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import axios from 'axios'
-import PostCard from '../components/PostCard'
+import Posts from '../components/Posts'
 import NewPostForm from '../components/NewPostForm'
 
 const Home = () => {
@@ -20,7 +20,7 @@ const Home = () => {
         </section>
         <h2 className="Feed">Feed</h2>
         <section className="grid-post">
-          <PostCard />
+          <Posts />
         </section>
         <section className="grid-cal"></section>
       </div>

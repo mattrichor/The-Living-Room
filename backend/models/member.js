@@ -12,7 +12,8 @@ const FamilyMember = new Schema(
     images: { type: Array, required: false },
     memories: { type: Array, required: false },
     children: { type: Array, required: false },
-    siblings: { type: Array, required: false }
+    siblings: { type: Array, required: false },
+    partner: { type: String, required: false }
   },
   { timestamps: true }
 )
