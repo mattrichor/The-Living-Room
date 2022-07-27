@@ -15,6 +15,7 @@
 
 body {
   font-family: 'Noto Sans', sans-serif;
+  background-color: #dde7dd;
 }
 
 header {
@@ -82,6 +83,7 @@ header {
 
 .post-full {
   display: block;
+  border-bottom: #221c42 solid 1pt;
 }
 
 .post-author {
@@ -124,12 +126,13 @@ header {
   cursor: pointer;
 }
 
-.update:hover {
-  background-color: #3f4022;
+.update:hover,
+.save-edits:hover {
+  background-color: #dde7dd;
 }
 
 .delete:hover {
-  background-color: rgb(176, 19, 19);
+  background-color: rgb(165, 106, 106);
 }
 
 .pro-pic {
@@ -239,4 +242,12 @@ canvas {
   font-size: larger;
   font-weight: bold;
   padding: 15pt;
+}
+
+.pro-pic {
+  object-fit: fill;
+  height: 5%;
+  max-width: 250px;
+  max-height: 250px;
+  border: 3pt #6a8f6b solid;
 }

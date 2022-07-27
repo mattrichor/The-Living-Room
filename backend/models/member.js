@@ -3,6 +3,7 @@ const Schema = mongoose.Schema
 
 const FamilyMember = new Schema(
   {
+    _id: { type: Number, required: true },
     name: { type: String, required: true },
     birthday: { type: String, required: true },
     deathday: { type: String, required: false },
@@ -13,7 +14,8 @@ const FamilyMember = new Schema(
     memories: { type: Array, required: false },
     children: { type: Array, required: false },
     siblings: { type: Array, required: false },
-    partner: { type: String, required: false }
+    partner: { type: Number, required: false },
+    gen: { type: Number, required: true }
   },
   { timestamps: true }
 )
