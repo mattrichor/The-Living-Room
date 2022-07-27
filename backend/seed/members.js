@@ -23,10 +23,10 @@ const main = async () => {
         'Often called ‘Hank” he had a remarkable sense of humor and was amazingly resilient - surviving diphtheria as a young man and a colostomy in 1952.',
         'He died of a heart attack in a hospital elevator at age 71 when visiting his first great-grandson in Waterbury, CT.'
       ],
-      children: [], //make key tags for each family member
+      children: [`62e18ddd5f0f398ce5cf126a`], //make key tags for each family member
       siblings: [],
       gen: 1,
-      partner: ''
+      partner: '62e18ddd5f0f398ce5cf1269'
     },
     {
       name: 'Mabel Vera Simpson',
@@ -44,9 +44,10 @@ const main = async () => {
         'Their daughter Marjorie was born in 1921, their son Harold in 1933 and Patricia in 1937. Mable was unable to work in CT because her birth certificate in N.Y could not be found. She often said if she could have stayed in school she thought she would have liked to be a teacher',
         'She survived breast cancer in 1946 and passed at age 84 in 1978 from heart failure.'
       ],
-      children: [], //make key tags for each family member
+      children: [`62e18ddd5f0f398ce5cf126a`], //make key tags for each family member
       siblings: [],
-      gen: 1
+      gen: 1,
+      partner: '62e18ddd5f0f398ce5cf1268'
     },
     {
       name: 'Patricia (Pat) Hawkins',
@@ -64,7 +65,7 @@ const main = async () => {
       children: [], //make key tags for each family member
       siblings: [],
       gen: 2,
-      partner: ''
+      partner: '62e18ddd5f0f398ce5cf126b'
     },
     {
       name: 'George Arthur Geyer',
@@ -81,7 +82,7 @@ const main = async () => {
       children: [], //make key tags for each family member
       siblings: [],
       gen: 2,
-      partner: ''
+      partner: '62e18ddd5f0f398ce5cf126a'
     },
     {
       name: 'John Wilford Johnson, Jr',
@@ -96,10 +97,14 @@ const main = async () => {
         `Married his high school sweetheart Phyllis who remained the love of his life and partner until his untimely passing during the covid pandemic`,
         `Known for his belief that rational discourse could settle the most heated of disagreements; his willingness to lend a helping hand and provide an answer on a variety of topics; his love of singing (barbershop, large chorus and church), golf and the beach.`
       ],
-      children: [], //make key tags for each family member
+      children: [
+        `62e18ddd5f0f398ce5cf126e`,
+        '62e18ddd5f0f398ce5cf126f',
+        '62e18ddd5f0f398ce5cf1273'
+      ], //make key tags for each family member
       siblings: [],
       gen: 2,
-      partner: ''
+      partner: '62e18ddd5f0f398ce5cf126d'
     },
     {
       name: 'Pyllis Gail Johnson',
@@ -113,7 +118,11 @@ const main = async () => {
       memories: [
         `Fond memories of her smiles when she was holding her new grandsons`
       ],
-      children: [], //make key tags for each family member
+      children: [
+        `62e18ddd5f0f398ce5cf126e`,
+        '62e18ddd5f0f398ce5cf126f',
+        '62e18ddd5f0f398ce5cf1273'
+      ], //make key tags for each family member
       siblings: [],
       gen: 2,
       partner: ''
@@ -150,7 +159,7 @@ const main = async () => {
         `Fond memories of music- great example the trash song written and sung with her nephews on vacation at the beach house`
       ],
       children: [], //make key tags for each family member
-      siblings: [],
+      siblings: [`62e18ddd5f0f398ce5cf126e`, '62e18ddd5f0f398ce5cf1273'],
       gen: 3,
       partner: ''
     },
@@ -212,7 +221,7 @@ const main = async () => {
       images: [],
       memories: [],
       children: [], //make key tags for each family member
-      siblings: [],
+      siblings: ['62e18ddd5f0f398ce5cf126f', `62e18ddd5f0f398ce5cf126e`],
       gen: 3,
       partner: ''
     },
@@ -247,7 +256,7 @@ const main = async () => {
   ]
 
   await FamilyMember.insertMany(familyMembers)
-  console.log('Populated social posts!')
+  console.log('Populated Fam!!')
 }
 
 const run = async () => {

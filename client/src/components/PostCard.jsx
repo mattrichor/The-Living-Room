@@ -25,6 +25,7 @@ const PostCard = (props) => {
     setEdit(false)
     console.log(_id)
     updatePost(_id, newTitle.current.value, newDescription.current.value)
+    window.location.reload(false)
   }
 
   const updatePost = async (_id, title, description) => {
@@ -90,7 +91,7 @@ const PostCard = (props) => {
             ></img>
           </div>
         ) : (
-          <container className="post-full">
+          <div className="post-full">
             <div className="img-wrapper">
               <img className="pro-pic" src={editIcon} alt={''} />
             </div>
@@ -120,7 +121,7 @@ const PostCard = (props) => {
             <h6 className="time">{props.time}</h6>
             <p className="post-text"> {props.description}</p>
             <p>Likes: {props.likes}</p>
-          </container>
+          </div>
         )}
       </div>
     </div>

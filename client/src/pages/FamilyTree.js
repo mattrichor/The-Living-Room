@@ -1,40 +1,21 @@
 import React from 'react'
-import { createRef } from 'react'
+import { useState, useEffect, createRef } from 'react'
+import axios from 'axios'
+
+const BASE_URL = 'http://localhost:3001/api'
 
 const FamilyTree = () => {
-  let canvas = React.useRef()
-  const ctx = canvas.getRef('2d')
+  const [fam, setFam] = useState([])
 
-  const drawTree = (
-    startX,
-    startY,
-    length,
-    angle,
-    branchWidth,
-    color1,
-    color2
-  ) => {
-    ctx.beginPath()
-    ctx.save()
-    ctx.strokeStyle = color1
-    ctx.strokeStyle = color2
-    ctx.lineWidth = branchWidth
-    ctx.translate(startX, startY)
-    ctx.rotate((angle * Math.PI) / 180)
-    ctx.moveTo(0.0)
-    ctx.lineTo(0, -length)
-    ctx.stroke()
-
-    if (length < 10) {
-      ctx.restore()
-      return
+  useEffect(() => {
+    const getFam = async () => {
+      const res = await axios.get(`${BASE_URL}/family`)
+      console.log(res)
+      setFam(res.data)
     }
-    drawTree(0, -length, length * 0.75, angle + 20, branchWidth)
-    drawTree(0, -length, length * 0.75, angle - 20, branchWidth)
+    getFam()
+  }, [])
 
-    ctx.restore()
-  }
-  drawTree(canvas.width / 2, canvas.height - 80, 120, 0, 2, 'brown', 'green')
   return (
     <div className="canvas">
       <button className="tree-gen-button"></button>
