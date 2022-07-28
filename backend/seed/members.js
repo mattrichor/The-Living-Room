@@ -56,8 +56,8 @@ const main = async () => {
     },
     {
       _id: 3,
-      name: 'Patricia (Pat) Hawkins',
-      birthday: 'September 19, 1892',
+      name: 'Patricia Hawkins',
+      birthday: 'September 30, 1937',
       deathday: '',
       isAlive: true,
       proPic: 'https://i.imgur.com/gF7hwb3.jpg',
@@ -74,7 +74,7 @@ const main = async () => {
     },
     {
       _id: 4,
-      name: 'George Arthur Geyer',
+      name: 'George Geyer',
       birthday: 'May 14, 1935',
       deathday: 'September 20th, 2021',
       isAlive: false,
@@ -92,7 +92,7 @@ const main = async () => {
     },
     {
       _id: 5,
-      name: 'John Wilford Johnson, Jr',
+      name: 'John Johnson, Jr',
       birthday: 'October 24, 1935',
       deathday: 'May 18, 2021',
       isAlive: false,
@@ -111,7 +111,7 @@ const main = async () => {
     },
     {
       _id: 6,
-      name: 'Pyllis Gail Johnson',
+      name: 'Pyllis Johnson',
       birthday: 'April 20, 1936',
       deathday: '',
       isAlive: true,
@@ -165,7 +165,7 @@ const main = async () => {
     },
     {
       _id: 9,
-      name: 'Greg Arthur Geyer',
+      name: 'Greg Geyer',
       birthday: 'July 29, 1961',
       deathday: '',
       isAlive: true,
@@ -214,7 +214,7 @@ const main = async () => {
     },
     {
       _id: 12,
-      name: 'Cindy Johnson Geyer',
+      name: 'Cindy Geyer',
       birthday: 'July 31, 1961',
       deathday: '',
       isAlive: true,
@@ -229,7 +229,7 @@ const main = async () => {
     },
     {
       _id: 13,
-      name: 'Matthew Arthur Geyer',
+      name: 'Matthew Geyer',
       birthday: 'July 10, 1995',
       deathday: '',
       isAlive: true,
@@ -243,7 +243,7 @@ const main = async () => {
     },
     {
       _id: 14,
-      name: 'Justin Glen Geyer',
+      name: 'Justin Geyer',
       birthday: 'July 10, 1995',
       deathday: '',
       isAlive: true,
