@@ -4,21 +4,20 @@
 
 body {
   font-family: 'Noto Sans', sans-serif;
-  background-color: #dde7dd;
+  background: linear-gradient(#dde7dd, #7c5a5a);
 }
 
 header {
-  background-color: #3f4022;
+  background-color: #114c28;
   text-align: center;
   font-weight: bold;
   text-decoration: none;
   color: white;
-
   margin-bottom: 0px;
 }
 
 .header-container {
-  background-color: #3f4022;
+  background-color: #114c28;
   display: flex;
   justify-content: flex-end;
 }
@@ -73,16 +72,28 @@ header {
   }
 }
 
-.posts {
-  background-color: #f1f1f1;
-}
-
 .post-full {
   display: block;
-  border-bottom: #221c42 solid 1pt;
+  padding-left: 3%;
 }
 
-.post-author {
+.edit {
+  padding-left: 3%;
+}
+
+.posts {
+  background-color: transparent;
+}
+.img-wrapper {
+  background-color: none;
+}
+
+.post-author,
+.time,
+.post-text,
+p {
+  background-color: #dde7dd;
+  margin: 0;
 }
 
 .post-text,
@@ -92,11 +103,9 @@ header {
   height: 80px;
   text-align: left;
   background-color: #dde7dd;
-  margin-right: 3%;
 }
 
 .post-text {
-  margin-left: 3%;
 }
 
 .delete,
@@ -145,7 +154,7 @@ header {
 .post-author {
   display: flex;
   justify-content: flex-start;
-  margin-left: 3%;
+  padding-left: 3%;
   text-align: left;
 }
 
@@ -271,14 +280,14 @@ canvas {
   height: 5%;
   width: 100px;
   height: 100px;
-  border: 3pt #6a8f6b solid;
+  border: 1pt transparent solid;
   display: block;
-  margin: 10px;
+  margin: 25px;
   border-radius: 2.8rem;
 }
 
 .pro-pic:hover {
-  border: 3pt #3e2718 solid;
+  border: 1pt solid;
 }
 
 h1 {
@@ -317,4 +326,22 @@ h1 {
 .partner {
   display: flex;
   justify-content: center;
+}
+
+.node-name {
+  text-align: center;
+}
+
+.post-tree {
+  max-height: 650px;
+  margin-top: 50px;
+}
+
+.post-card {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.family-tree {
+  background: rgb(165, 106, 106);
 }

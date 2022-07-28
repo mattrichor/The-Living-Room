@@ -13,6 +13,7 @@ const PostCard = (props) => {
   const newTitle = createRef()
   const newDescription = createRef()
   const [menu, toggleMenu] = useState(false)
+  const [fam, setFam] = useState([])
 
   const showMenu = () => {
     if (menu === false) {
@@ -38,11 +39,21 @@ const PostCard = (props) => {
       })
   }
 
+  useEffect(() => {
+    const getFam = async () => {
+      const res = await axios.get(`${BASE_URL}/family`)
+      console.log(res)
+      setFam(res.data)
+      console.log(fam)
+    }
+    getFam()
+  }, [])
+
   return (
     <div key={props._id}>
-      <div className="edit">
+      <div>
         {edit ? (
-          <div>
+          <div className="edit">
             <div className="img-wrapper">
               <img className="post-pic" src={editIcon} alt={''} />
             </div>

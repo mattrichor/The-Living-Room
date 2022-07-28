@@ -56,7 +56,7 @@ const Profile = () => {
       </div>
       <div className="info-wrapper flex-col">
         <h3 className="fam-name"> {fam.name != null ? fam.name : ''}</h3>
-        <p>Born {fam.name != null ? fam.birthday : ''}</p>
+        <div>Born {fam.name != null ? fam.birthday : ''}</div>
       </div>
       <div className="about">{fam.name != null ? fam.about : ''}</div>
       <ul className="memories">

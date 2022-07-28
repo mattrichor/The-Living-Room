@@ -3,9 +3,13 @@ import { useNavigate, useParams } from 'react-router-dom'
 import axios from 'axios'
 import Posts from '../components/Posts'
 import NewPostForm from '../components/NewPostForm'
+import tree from '../buttons/tree2.gif'
+import addNote from '../buttons/addnote.png'
 
 const Home = () => {
   const [posts, setPosts] = useState([])
+  const [newPost, toggleNewPost] = useState(false)
+  const [fam, setFam] = useState([])
 
   let navigate = useNavigate()
 
@@ -16,10 +20,22 @@ const Home = () => {
       <h1 className="title">The Living Room</h1>
       <div className="grid-main">
         <section className="grid-post">
-          <h2 className="Feed">Feed</h2>
+          <div className="Feed">
+            Feed
+            <img
+              src={addNote}
+              className="update"
+              onClick={() => {
+                toggleNewPost(true)
+              }}
+            ></img>
+          </div>
+          {newPost === true ? <NewPostForm /> : <div></div>}
           <Posts />
         </section>
-        <NewPostForm className="grid-form" />
+        <div className="grid-form">
+          <img className="post-tree" src={tree}></img>
+        </div>
       </div>
     </div>
   )
