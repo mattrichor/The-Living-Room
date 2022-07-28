@@ -10,6 +10,8 @@ const Profile = () => {
 
   const [fam, setFam] = useState('')
   const [child, setChild] = useState(null)
+  const [spouse, setSpouse] = useState(null)
+  const [spouseKey, setSpouseKey] = useState(null)
 
   let navigate = useNavigate()
 
@@ -19,6 +21,7 @@ const Profile = () => {
     const getFambyId = async () => {
       const res = await axios.get(`${BASE_URL}/family/${id}`)
       setFam(res.data.selMemb)
+      setSpouseKey(res.data.selMemb.partner)
     }
     getFambyId()
   }, [])
@@ -27,16 +30,31 @@ const Profile = () => {
     const getFam = async () => {
       const res = await axios.get(`${BASE_URL}/family`)
       let childrens = []
+      let partner = null
       fam.children.forEach((child) => {
         childrens = [...childrens, res.data[child - 1]] //very weird that I have to do this
       })
+      //   fam.spouse.map((p) => {setSpouse(p)})setSpouse(res.data[spouseKey])
       console.log(childrens)
+      console.log(spouse)
       setChild(childrens)
+      setSpouse(partner)
     }
     if (fam != '') {
       getFam()
     }
   }, [fam])
+
+  //   useEffect(() => {
+  //     const getSpouse = async () => {
+  //       const res = await axios.get(`${BASE_URL}/family`)
+  //       setSpouse(res.data.partner)
+  //       console.log(spouse)
+  //     }
+  //     if (fam != '') {
+  //       getSpouse()
+  //     }
+  //   }, [fam])
 
   return (
     <div>
@@ -83,6 +101,29 @@ const Profile = () => {
             ))
           : ''}
       </ul>
+      {spouse != null
+        ? spouse.map((child) => (
+            <MemberNode
+              onClick={() => {
+                navigate(`/${child._id}`)
+              }}
+              name={child.name}
+              proPic={child.proPic}
+              birthday={child.birthday}
+              death={child.deathday}
+              isAlive={child.isAlive}
+              about={child.about}
+              _id={child._id}
+              key={child._id}
+              images={child.images}
+              memories={child.memories}
+              children={child.children}
+              siblings={child.siblings}
+              partner={child.partner}
+              gen={child.gen}
+            ></MemberNode>
+          ))
+        : ''}
     </div>
   )
 }
