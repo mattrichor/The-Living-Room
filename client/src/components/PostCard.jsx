@@ -45,9 +45,14 @@ const PostCard = (props) => {
       console.log(res)
       setFam(res.data)
       console.log(fam)
+      for (let i = 0; i < fam.length; i++) {
+        if (fam.name === props.author) {
+          console.log(fam.name)
+        }
+      }
     }
     getFam()
-  }, [])
+  }, [props.togglePosted(true)])
 
   return (
     <div key={props._id}>

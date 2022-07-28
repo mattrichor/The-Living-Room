@@ -335,6 +335,30 @@ h1 {
 .post-tree {
   max-height: 650px;
   margin-top: 50px;
+  position: fixed;
+  bottom: 0px;
+  left: 66%;
+}
+.img_wrap {
+  position: fixed;
+  left: 80%;
+  margin-top: 315px;
+}
+.post-tree:hover {
+  filter: brightness(120%);
+  filter: contrast(120%);
+  filter: drop-shadow(10px 10px 10px #6a8f6b);
+  max-height: 660px;
+  cursor: pointer;
+}
+.img_wrap:hover {
+  text-transform: capitalize;
+}
+
+.new-post {
+  position: fixed;
+  bottom: 650px;
+  max-width: 40px;
 }
 
 .post-card {

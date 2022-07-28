@@ -9,7 +9,6 @@ import addNote from '../buttons/addnote.png'
 const Home = () => {
   const [posts, setPosts] = useState([])
   const [newPost, toggleNewPost] = useState(false)
-  const [fam, setFam] = useState([])
 
   let navigate = useNavigate()
 
@@ -20,21 +19,19 @@ const Home = () => {
       <h1 className="title">The Living Room</h1>
       <div className="grid-main">
         <section className="grid-post">
-          <div className="Feed">
-            Feed
-            <img
-              src={addNote}
-              className="update"
-              onClick={() => {
-                toggleNewPost(true)
-              }}
-            ></img>
-          </div>
+          <div className="Feed">Feed</div>
           {newPost === true ? <NewPostForm /> : <div></div>}
           <Posts />
         </section>
         <div className="grid-form">
-          <img className="post-tree" src={tree}></img>
+          <div className="img_wrap">Create new Post!</div>
+          <img
+            className="post-tree"
+            src={tree}
+            onClick={() => {
+              toggleNewPost(true)
+            }}
+          ></img>
         </div>
       </div>
     </div>
