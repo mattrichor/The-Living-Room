@@ -135,7 +135,7 @@ header {
   background-color: rgb(165, 106, 106);
 }
 
-.pro-pic {
+.post-pic {
   border-radius: 3rem;
   border: #221c42;
   width: 12%;
@@ -248,14 +248,18 @@ canvas {
   display: grid;
   grid-template-rows: 1fr 1fr 1fr 1fr;
   height: 5%;
+  justify-content: center;
 }
 
 .gen1 {
   grid-row: 1;
+  align-content: center;
+  grid-template-columns: 1fr 1fr;
 }
 
 .gen2 {
   grid-row: 2;
+  grid-template-columns: 1fr 1fr;
 }
 
 .gen3 {
@@ -273,5 +277,30 @@ canvas {
   height: 100px;
   border: 3pt #6a8f6b solid;
   display: block;
-  margin: 50px;
+  margin: 10px;
+  border-radius: 2.8rem;
+}
+
+.pro-pic:hover {
+  border: 3pt #3e2718 solid;
+}
+
+h1 {
+  font-size: small;
+  color: transparent;
+}
+
+.family-details {
+  display: flex;
+  justify-content: center;
+}
+
+.profile {
+  object-fit: fill;
+  height: 5%;
+  width: 500px;
+  height: 500px;
+}
+
+.about {
 }

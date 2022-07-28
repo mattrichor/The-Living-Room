@@ -44,7 +44,7 @@ const PostCard = (props) => {
         {edit ? (
           <div>
             <div className="img-wrapper">
-              <img className="pro-pic" src={editIcon} alt={''} />
+              <img className="post-pic" src={editIcon} alt={''} />
             </div>
             <div className="title-grid">
               <input
@@ -93,7 +93,7 @@ const PostCard = (props) => {
         ) : (
           <div className="post-full">
             <div className="img-wrapper">
-              <img className="pro-pic" src={editIcon} alt={''} />
+              <img className="post-pic" src={editIcon} alt={''} />
             </div>
             <div className="title-grid">
               <div className="post-title">{props.title}</div>

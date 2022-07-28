@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState, useEffect, createRef } from 'react'
+import { useNavigate, useParams } from 'react-router-dom'
 import axios from 'axios'
 import MemberNode from '../components/MemberNode'
 
@@ -7,6 +8,7 @@ const BASE_URL = 'http://localhost:3001/api'
 
 const FamilyTree = () => {
   const [fam, setFam] = useState([])
+  let navigate = useNavigate()
 
   useEffect(() => {
     const getFam = async () => {
@@ -21,6 +23,10 @@ const FamilyTree = () => {
     <div className="generations">
       {fam.map((res) => (
         <MemberNode
+          className={`gen${res.gen}`}
+          onClick={() => {
+            navigate(`/${res._id}`)
+          }}
           name={res.name}
           proPic={res.proPic}
           birthday={res.birthday}

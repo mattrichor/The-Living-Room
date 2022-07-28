@@ -4,6 +4,7 @@ import Home from './pages/Home'
 //Page imports here
 import Header from './components/Header'
 import FamilyTree from './pages/FamilyTree'
+import Profile from './components/Profile'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/posts" />
           <Route path="/tree" element={<FamilyTree />} />
+          <Route path="/:id" element={<Profile />} />
         </Routes>
       </main>
     </div>
