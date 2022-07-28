@@ -18,7 +18,7 @@ const FamilyTree = () => {
   }, [])
 
   return (
-    <div className="canvas">
+    <div className="generations">
       {fam.map((res) => (
         <MemberNode
           name={res.name}
@@ -34,6 +34,7 @@ const FamilyTree = () => {
           children={res.children}
           siblings={res.siblings}
           partner={res.partner}
+          gen={res.gen}
         ></MemberNode>
       ))}
     </div>

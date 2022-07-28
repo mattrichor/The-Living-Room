@@ -13,7 +13,6 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/posts" />
-          <Route path="/calendar" />
           <Route path="/tree" element={<FamilyTree />} />
         </Routes>
       </main>
