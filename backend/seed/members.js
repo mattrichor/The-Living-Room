@@ -67,7 +67,7 @@ const main = async () => {
       memories: [
         `My mom rubbed my back as I fell asleep for years.   If I woke up in the middle of the night she would help me fall asleep.  Once I got a little bit older to realize this for a short period of time I would pretend to sleepwalk or roll out into the hallway ( as would Brad ) and she would help us get to bed, rub our backs... :)   very fond memories. - Written by Greg Geyer`
       ],
-      children: [9, 10, 11], //make key tags for each family member
+      children: [7, 8, 9], //make key tags for each family member
       siblings: [],
       gen: 2,
       partner: 4
@@ -85,7 +85,7 @@ const main = async () => {
       memories: [
         `My dad got me a boat and taught me how to sail and things that we share are the love of sailing and another the love of teaching /coaching.   We spent a good deal of very close time together by ourselves over the last 10 years or so having great talks about just about everything.   Some of my memories now are his memories told back to me -Written by Greg Geyer`
       ],
-      children: [9, 10, 11], //make key tags for each family member
+      children: [7, 8, 9], //make key tags for each family member
       siblings: [],
       gen: 2,
       partner: 3
@@ -104,7 +104,7 @@ const main = async () => {
         `Married his high school sweetheart Phyllis who remained the love of his life and partner until his untimely passing during the covid pandemic`,
         `Known for his belief that rational discourse could settle the most heated of disagreements; his willingness to lend a helping hand and provide an answer on a variety of topics; his love of singing (barbershop, large chorus and church), golf and the beach.`
       ],
-      children: [7, 8, 12], //make key tags for each family member
+      children: [10, 11, 12], //make key tags for each family member
       siblings: [],
       gen: 2,
       partner: 6
@@ -122,13 +122,78 @@ const main = async () => {
       memories: [
         `Fond memories of her smiles when she was holding her new grandsons`
       ],
-      children: [7, 8, 12], //make key tags for each family member
+      children: [10, 11, 12], //make key tags for each family member
       siblings: [],
       gen: 2,
       partner: 5
     },
+
     {
       _id: 7,
+      name: 'Diane Geyer',
+      birthday: 'July 29, 1961',
+      deathday: '',
+      isAlive: false,
+      proPic: 'https://i.imgur.com/QpteuSc.png',
+      about:
+        'Always the encouraging voice in the heads of her siblings, & always remembered everything, no matter how small. Kind and generous - loved cats and people, the beach, butterflies and flowers.',
+      images: [],
+      memories: [
+        `My sister and I were very close until she started dating Mike from up the road.  At that point I went out of my way to bug them and interrupt them and get on Mike's nerves.   At the time it just felt like the thing to do.   But in reality I was not yet old enough to realize I was just super jealous someone else was hanging out with my best friend. Pretty normal stuff - Written by Greg Geyer`
+      ],
+      children: [], //make key tags for each family member
+      siblings: [9, 8],
+      gen: 3
+    },
+    {
+      _id: 8,
+      name: 'Brad Geyer',
+      birthday: 'July 31, 1961',
+      deathday: '2020',
+      isAlive: false,
+      proPic: 'https://i.imgur.com/APCS1aD.png',
+      about:
+        'My younger brother who I always admire.  He was cooler than me in high school, beat my records in track, got all the girls swooning, etc. He was enterprising and productive and a father with a wonderful family. - Written by Greg Geyer',
+      images: [`https://i.imgur.com/unCU5ON.jpg`],
+      memories: [
+        `I remember shooting off rockets in roys field as kids, feeling protective and competing in a loving way.  And, I remember shooting off rockets with Brad the last time only a short while ago.    He loved it and had no one to do it with - we had a great time and he loved making models.`
+      ],
+      children: [], //make key tags for each family member
+      siblings: [9, 7],
+      gen: 3
+    },
+    {
+      _id: 9,
+      name: 'Greg Geyer',
+      birthday: 'July 29, 1961',
+      deathday: '',
+      isAlive: true,
+      proPic: 'https://i.imgur.com/Qgs1iOd.png',
+      about: '',
+      images: [`https://i.imgur.com/n0OyijU.jpg`],
+      memories: [],
+      children: [13, 14], //make key tags for each family member
+      siblings: [8, 7],
+      gen: 3,
+      partner: 10
+    },
+    {
+      _id: 10,
+      name: 'Cindy Geyer',
+      birthday: 'July 31, 1961',
+      deathday: '',
+      isAlive: true,
+      proPic: 'https://i.imgur.com/j8MVfGg.png',
+      about: '',
+      images: [`https://i.imgur.com/2JnNNbX.jpg`],
+      memories: [],
+      children: [13, 14], //make key tags for each family member
+      siblings: [7, 8],
+      gen: 3,
+      partner: 9
+    },
+    {
+      _id: 11,
       name: 'Julie Olszko',
       birthday: 'May 16, 1958',
       deathday: '',
@@ -146,7 +211,7 @@ const main = async () => {
       gen: 3
     },
     {
-      _id: 8,
+      _id: 12,
       name: 'Catherine Dison',
       birthday: 'June 20, 1966',
       deathday: '',
@@ -163,70 +228,7 @@ const main = async () => {
       siblings: [7, 12],
       gen: 3
     },
-    {
-      _id: 9,
-      name: 'Greg Geyer',
-      birthday: 'July 29, 1961',
-      deathday: '',
-      isAlive: true,
-      proPic: 'https://i.imgur.com/Qgs1iOd.png',
-      about: '',
-      images: [`https://i.imgur.com/n0OyijU.jpg`],
-      memories: [],
-      children: [13, 14], //make key tags for each family member
-      siblings: [10, 11],
-      gen: 3,
-      partner: 12
-    },
-    {
-      _id: 10,
-      name: 'Diane Geyer',
-      birthday: 'July 29, 1961',
-      deathday: '',
-      isAlive: false,
-      proPic: 'https://i.imgur.com/QpteuSc.png',
-      about:
-        'Always the encouraging voice in the heads of her siblings, & always remembered everything, no matter how small. Kind and generous - loved cats and people, the beach, butterflies and flowers.',
-      images: [],
-      memories: [
-        `My sister and I were very close until she started dating Mike from up the road.  At that point I went out of my way to bug them and interrupt them and get on Mike's nerves.   At the time it just felt like the thing to do.   But in reality I was not yet old enough to realize I was just super jealous someone else was hanging out with my best friend. Pretty normal stuff - Written by Greg Geyer`
-      ],
-      children: [], //make key tags for each family member
-      siblings: [9, 11],
-      gen: 3
-    },
-    {
-      _id: 11,
-      name: 'Brad Geyer',
-      birthday: 'July 31, 1961',
-      deathday: '2020',
-      isAlive: false,
-      proPic: 'https://i.imgur.com/APCS1aD.png',
-      about:
-        'My younger brother who I always admire.  He was cooler than me in high school, beat my records in track, got all the girls swooning, etc. He was enterprising and productive and a father with a wonderful family. - Written by Greg Geyer',
-      images: [`https://i.imgur.com/unCU5ON.jpg`],
-      memories: [
-        `I remember shooting off rockets in roys field as kids, feeling protective and competing in a loving way.  And, I remember shooting off rockets with Brad the last time only a short while ago.    He loved it and had no one to do it with - we had a great time and he loved making models.`
-      ],
-      children: [], //make key tags for each family member
-      siblings: [9, 10],
-      gen: 3
-    },
-    {
-      _id: 12,
-      name: 'Cindy Geyer',
-      birthday: 'July 31, 1961',
-      deathday: '',
-      isAlive: true,
-      proPic: 'https://i.imgur.com/j8MVfGg.png',
-      about: '',
-      images: [`https://i.imgur.com/2JnNNbX.jpg`],
-      memories: [],
-      children: [13, 14], //make key tags for each family member
-      siblings: [7, 8],
-      gen: 3,
-      partner: 9
-    },
+
     {
       _id: 13,
       name: 'Matthew Geyer',

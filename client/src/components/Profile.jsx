@@ -22,7 +22,7 @@ const Profile = () => {
       const res = await axios.get(`${BASE_URL}/family/${id}`).then((res) => {
         setFam(res.data.selMemb)
         setSpouseKey(res.data.selMemb.partner)
-        console.log(spouseKey)
+        console.log(res.data.selMemb.partner)
       })
     }
     getFambyId()
@@ -38,12 +38,12 @@ const Profile = () => {
       console.log(childrens)
       console.log(spouseKey)
       setChild(childrens)
-      setSpouse(res.data[spouseKey])
+      setSpouse(res.data[spouseKey - 1])
     }
     // if (fam != '') {
     getFam()
     // }
-  }, [fam])
+  }, [fam, spouseKey])
 
   return (
     <div>
@@ -64,55 +64,64 @@ const Profile = () => {
           ? fam.memories.map((memory) => <li>{memory}</li>)
           : ''}
       </ul>
-      <ul>
-        <h3>Children:</h3>
-        {child != null
-          ? child.map((child) => (
+      <div className="rel-grid">
+        <div style={{ textAlign: 'center' }}>
+          Partner
+          <div className="partner">
+            {spouse != null ? (
               <MemberNode
                 onClick={() => {
-                  navigate(`/${child._id}`)
+                  navigate(`/${spouse._id}`)
                 }}
-                name={child.name}
-                proPic={child.proPic}
-                birthday={child.birthday}
-                death={child.deathday}
-                isAlive={child.isAlive}
-                about={child.about}
-                _id={child._id}
-                key={child._id}
-                images={child.images}
-                memories={child.memories}
-                children={child.children}
-                siblings={child.siblings}
-                partner={child.partner}
-                gen={child.gen}
+                name={spouse.name}
+                proPic={spouse.proPic}
+                birthday={spouse.birthday}
+                death={spouse.deathday}
+                isAlive={spouse.isAlive}
+                about={spouse.about}
+                _id={spouse._id}
+                key={spouse._id}
+                images={spouse.images}
+                memories={spouse.memories}
+                children={spouse.children}
+                siblings={spouse.siblings}
+                partner={spouse.partner}
+                gen={spouse.gen}
               ></MemberNode>
-            ))
-          : ''}
-      </ul>
-      {spouse != null
-        ? spouse.map((child) => (
-            <MemberNode
-              onClick={() => {
-                navigate(`/${child._id}`)
-              }}
-              name={child.name}
-              proPic={child.proPic}
-              birthday={child.birthday}
-              death={child.deathday}
-              isAlive={child.isAlive}
-              about={child.about}
-              _id={child._id}
-              key={child._id}
-              images={child.images}
-              memories={child.memories}
-              children={child.children}
-              siblings={child.siblings}
-              partner={child.partner}
-              gen={child.gen}
-            ></MemberNode>
-          ))
-        : ''}
+            ) : (
+              ''
+            )}
+          </div>
+        </div>
+        <div style={{ textAlign: 'center' }}>
+          Children
+          <div className="children">
+            {child != null
+              ? child.map((child) => (
+                  <MemberNode
+                    onClick={() => {
+                      navigate(`/${child._id}`)
+                    }}
+                    name={child.name}
+                    proPic={child.proPic}
+                    birthday={child.birthday}
+                    death={child.deathday}
+                    isAlive={child.isAlive}
+                    about={child.about}
+                    _id={child._id}
+                    key={child._id}
+                    images={child.images}
+                    memories={child.memories}
+                    children={child.children}
+                    siblings={child.siblings}
+                    partner={child.partner}
+                    gen={child.gen}
+                  ></MemberNode>
+                ))
+              : ''}
+          </div>
+        </div>
+      </div>
     </div>
   )
 }

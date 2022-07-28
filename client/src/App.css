@@ -35,7 +35,7 @@ header {
 }
 
 .nav-link:hover {
-  background-color: #221c42;
+  background-color: #dde7dd;
   height: 50px;
   margin: -5px;
   margin-left: 35px;
@@ -124,7 +124,7 @@ header {
 
 .update:hover,
 .save-edits:hover {
-  background-color: #dde7dd;
+  background-color: #6a8f6b;
 }
 
 .delete:hover {
@@ -296,6 +296,8 @@ h1 {
   height: 5%;
   width: 500px;
   height: 500px;
+  margin-top: 3%;
+  border-radius: 2rem;
 }
 
 .fam-name {
@@ -303,4 +305,16 @@ h1 {
 }
 
 .about {
+}
+
+.rel-grid {
+}
+
+.children {
+  display: flex;
+  justify-content: center;
+}
+.partner {
+  display: flex;
+  justify-content: center;
 }

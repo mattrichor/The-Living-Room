@@ -7,7 +7,7 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 const main = async () => {
   await CalendarPost.deleteMany({})
   await FamilyMember.deleteMany({})
-  await SocialPost.deleteMany({})
+  // await SocialPost.deleteMany({})
   console.log('Deleted Collections')
 }
 const run = async () => {
