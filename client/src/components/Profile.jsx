@@ -28,7 +28,7 @@ const Profile = () => {
       const res = await axios.get(`${BASE_URL}/family`)
       let childrens = []
       fam.children.forEach((child) => {
-        childrens = [...childrens, res.data[child]]
+        childrens = [...childrens, res.data[child - 1]] //very weird that I have to do this
       })
       console.log(childrens)
       setChild(childrens)
