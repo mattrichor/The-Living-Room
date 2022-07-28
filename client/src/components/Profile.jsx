@@ -11,7 +11,7 @@ const Profile = () => {
   const [fam, setFam] = useState('')
   const [child, setChild] = useState(null)
   const [spouse, setSpouse] = useState(null)
-  const [spouseKey, setSpouseKey] = useState(null)
+  const [spouseKey, setSpouseKey] = useState('')
 
   let navigate = useNavigate()
 
@@ -19,9 +19,11 @@ const Profile = () => {
 
   useEffect(() => {
     const getFambyId = async () => {
-      const res = await axios.get(`${BASE_URL}/family/${id}`)
-      setFam(res.data.selMemb)
-      setSpouseKey(res.data.selMemb.partner)
+      const res = await axios.get(`${BASE_URL}/family/${id}`).then((res) => {
+        setFam(res.data.selMemb)
+        setSpouseKey(res.data.selMemb.partner)
+        console.log(spouseKey)
+      })
     }
     getFambyId()
   }, [])
@@ -30,31 +32,18 @@ const Profile = () => {
     const getFam = async () => {
       const res = await axios.get(`${BASE_URL}/family`)
       let childrens = []
-      let partner = null
       fam.children.forEach((child) => {
         childrens = [...childrens, res.data[child - 1]] //very weird that I have to do this
       })
-      //   fam.spouse.map((p) => {setSpouse(p)})setSpouse(res.data[spouseKey])
       console.log(childrens)
-      console.log(spouse)
+      console.log(spouseKey)
       setChild(childrens)
-      setSpouse(partner)
+      setSpouse(res.data[spouseKey])
     }
-    if (fam != '') {
-      getFam()
-    }
+    // if (fam != '') {
+    getFam()
+    // }
   }, [fam])
-
-  //   useEffect(() => {
-  //     const getSpouse = async () => {
-  //       const res = await axios.get(`${BASE_URL}/family`)
-  //       setSpouse(res.data.partner)
-  //       console.log(spouse)
-  //     }
-  //     if (fam != '') {
-  //       getSpouse()
-  //     }
-  //   }, [fam])
 
   return (
     <div>
@@ -66,7 +55,7 @@ const Profile = () => {
         />
       </div>
       <div className="info-wrapper flex-col">
-        <h3> {fam.name != null ? fam.name : ''}</h3>
+        <h3 className="fam-name"> {fam.name != null ? fam.name : ''}</h3>
         <p>Born {fam.name != null ? fam.birthday : ''}</p>
       </div>
       <div className="about">{fam.name != null ? fam.about : ''}</div>

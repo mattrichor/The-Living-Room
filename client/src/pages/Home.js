@@ -20,8 +20,6 @@ const Home = () => {
           <Posts />
         </section>
         <NewPostForm className="grid-form" />
-
-        <section className="grid-cal"></section>
       </div>
     </div>
   )

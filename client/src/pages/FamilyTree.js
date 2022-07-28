@@ -15,6 +15,7 @@ const FamilyTree = () => {
       const res = await axios.get(`${BASE_URL}/family`)
       console.log(res)
       setFam(res.data)
+      console.log(fam)
     }
     getFam()
   }, [])
