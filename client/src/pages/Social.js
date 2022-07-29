@@ -16,10 +16,9 @@ const Social = () => {
 
   return (
     <div>
-      <h1 className="title">The Living Room</h1>
       <div className="grid-main">
         <section className="grid-post">
-          <div className="Feed">Feed</div>
+          <h3 className="Feed">Feed</h3>
           {newPost === true ? <NewPostForm /> : <div></div>}
           <Posts />
         </section>

@@ -64,7 +64,7 @@ const PostCard = (props) => {
             </div>
             <div className="title-grid">
               <input
-                className="post-title title-form"
+                className="post-title"
                 type="text"
                 defaultValue={props.title}
                 placeholder="New Title"
