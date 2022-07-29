@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { useNavigate, useParams } from 'react-router-dom'
 import axios from 'axios'
 import Posts from '../components/Posts'
@@ -14,7 +15,9 @@ const Home = () => {
       <div className="welcome-text">
         <span className="whitespace"></span>A Social App for Families
       </div>
-      <button className="welcome-button">Enter</button>
+      <Link className="nav" to="/posts">
+        <button className="welcome-button">Enter</button>
+      </Link>
     </div>
   )
 }
