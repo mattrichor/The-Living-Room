@@ -63,15 +63,6 @@ header {
   grid-column: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 .post-full {
   display: block;
   padding-left: 3%;
@@ -123,13 +114,8 @@ p {
 }
 
 .save-edits {
-  width: 25px;
-  font-size: 12px;
-  font-weight: bold;
-  color: grey;
-  border: none;
-  background-color: transparent;
   cursor: pointer;
+  height: ;
 }
 
 .update:hover,
@@ -361,7 +347,7 @@ canvas {
   border: none;
   outline: none;
   color: rgb(0, 0, 0);
-  background-color: rgb(227, 0, 0);
+  background-color: rgb(165, 106, 106);
   cursor: pointer;
   position: relative;
   z-index: 0;
@@ -420,6 +406,23 @@ canvas {
   border-radius: 3rem;
 }
 
+.submit,
+.save-edits {
+  background-image: radial-gradient(
+    100% 100% at 100% 0,
+    #5adaff 0,
+    #6e5e80 100%
+  );
+  left: 0;
+  top: 0;
+  border-radius: 3rem;
+  color: rgb(240, 229, 229);
+}
+
+.submit:hover {
+  cursor: pointer;
+}
+
 @keyframes glowing {
   0% {
     background-position: 0 0;
@@ -461,4 +464,9 @@ h1 {
 
 .welcome-button:active {
   box-shadow: #3c4fe0 0 3px 7px inset;
+}
+
+.profile-all {
+  margin-left: 5%;
+  margin-right: 5%;
 }

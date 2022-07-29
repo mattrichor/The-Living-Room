@@ -46,7 +46,7 @@ const Profile = () => {
   }, [fam, spouseKey])
 
   return (
-    <div>
+    <div className="profile-all">
       <div className="family-details">
         <img
           className="profile"
@@ -56,7 +56,10 @@ const Profile = () => {
       </div>
       <div className="info-wrapper flex-col">
         <h3 className="fam-name"> {fam.name != null ? fam.name : ''}</h3>
-        <div>Born {fam.name != null ? fam.birthday : ''}</div>
+        <div>
+          {fam.name != null ? fam.birthday : ''}
+          {fam.isAlive ? <span></span> : <span> - {fam.deathday} </span>}
+        </div>
       </div>
       <div className="about">{fam.name != null ? fam.about : ''}</div>
       <ul className="memories">

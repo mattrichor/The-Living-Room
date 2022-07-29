@@ -14,6 +14,7 @@ const PostCard = (props) => {
   const newDescription = createRef()
   const [menu, toggleMenu] = useState(false)
   const [fam, setFam] = useState([])
+  const [pic, setPic] = useState('')
 
   const showMenu = () => {
     if (menu === false) {
@@ -39,20 +40,20 @@ const PostCard = (props) => {
       })
   }
 
+  const getFam = async () => {
+    const res = await axios.get(`${BASE_URL}/family`)
+
+    setFam(res.data)
+  }
+
   useEffect(() => {
-    const getFam = async () => {
-      const res = await axios.get(`${BASE_URL}/family`)
-      console.log(res)
-      setFam(res.data)
-      console.log(fam)
-      for (let i = 0; i < fam.length; i++) {
-        if (fam.name === props.author) {
-          console.log(fam.name)
-        }
-      }
-    }
     getFam()
-  }, [props.togglePosted(true)])
+    fam.map((member) => {
+      if (member.name == props.author) {
+        setPic(member.proPic)
+      }
+    })
+  }, [])
 
   return (
     <div key={props._id}>
@@ -100,16 +101,22 @@ const PostCard = (props) => {
               ref={newDescription}
             ></textarea>
             <br></br>
-            <img
+            <button
               className="save-edits"
               src={saveIcon}
               onClick={() => saveUpdate(props._id)}
-            ></img>
+            >
+              Submit
+            </button>
           </div>
         ) : (
           <div className="post-full">
             <div className="img-wrapper">
-              <img className="post-pic" src={editIcon} alt={''} />
+              <img
+                className="post-pic"
+                src={pic != '' ? pic : editIcon}
+                alt={''}
+              />
             </div>
             <div className="title-grid">
               <div className="post-title">{props.title}</div>

@@ -22,16 +22,6 @@ const Post = () => {
     getPosts()
   }, [posted === true])
 
-  useEffect(() => {
-    const getFam = async () => {
-      const res = await axios.get(`${BASE_URL}/family`)
-      console.log(res)
-      setFam(res.data)
-      console.log(fam)
-    }
-    getFam()
-  }, [posted === true])
-
   const deletePost = async (_id) => {
     let res = await axios
       .delete(`${BASE_URL}/delete-post/${_id}`)
