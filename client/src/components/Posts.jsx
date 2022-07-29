@@ -20,7 +20,7 @@ const Post = () => {
       setPosts(res.data)
     }
     getPosts()
-  }, [posted === true])
+  }, [posted])
 
   const deletePost = async (_id) => {
     let res = await axios
@@ -46,6 +46,7 @@ const Post = () => {
           deletePost={() => deletePost(res._id)}
           // updatePost={() => updatePost(res._id)}
           togglePosted={() => togglePosted()}
+          posted={posted}
         ></PostCard>
       ))}
     </div>

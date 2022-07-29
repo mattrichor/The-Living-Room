@@ -15,6 +15,7 @@ const PostCard = (props) => {
   const [menu, toggleMenu] = useState(false)
   const [fam, setFam] = useState([])
   const [pic, setPic] = useState('')
+  const [togglePics, setTogglePics] = useState(false)
 
   const showMenu = () => {
     if (menu === false) {
@@ -23,11 +24,13 @@ const PostCard = (props) => {
       toggleMenu(false)
     }
   }
+
   const saveUpdate = (_id) => {
     setEdit(false)
     console.log(_id)
     updatePost(_id, newTitle.current.value, newDescription.current.value)
-    window.location.reload(false)
+    setTogglePics(true)
+    props.togglePosted(true)
   }
 
   const updatePost = async (_id, title, description) => {
@@ -40,20 +43,21 @@ const PostCard = (props) => {
       })
   }
 
-  const getFam = async () => {
-    const res = await axios.get(`${BASE_URL}/family`)
-
-    setFam(res.data)
-  }
+  useEffect(() => {
+    const getFam = async () => {
+      const res = await axios.get(`${BASE_URL}/family`)
+      setFam(res.data)
+    }
+    getFam()
+  }, [props.posted])
 
   useEffect(() => {
-    getFam()
     fam.map((member) => {
       if (member.name == props.author) {
         setPic(member.proPic)
       }
     })
-  }, [])
+  }, [fam])
 
   return (
     <div key={props._id}>
@@ -61,7 +65,11 @@ const PostCard = (props) => {
         {edit ? (
           <div className="edit">
             <div className="img-wrapper">
-              <img className="post-pic" src={editIcon} alt={''} />
+              <img
+                className="post-pic"
+                src={pic != '' ? pic : editIcon}
+                alt={''}
+              />
             </div>
             <div className="title-grid">
               <input
