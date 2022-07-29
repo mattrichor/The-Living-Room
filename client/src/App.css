@@ -343,7 +343,11 @@ canvas {
 }
 
 .family-tree {
-  background: rgb(165, 106, 106);
+  background: #7c5a5a;
+}
+
+.tree-text {
+  font-style: italic;
 }
 
 .welcome-text {
