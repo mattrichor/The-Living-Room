@@ -58,3 +58,4 @@ link here: ()
 ### **_Credits_**
 
 - ME (this is my megalomaniac arc)
+- Just kidding; huge thank you to my peers in GA, specifically Ken & An for sharing ideas and bouncing things off of eachother!

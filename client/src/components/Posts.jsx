@@ -10,9 +10,6 @@ const Post = () => {
   const [posted, togglePosted] = useState(false)
   const [fam, setFam] = useState([])
 
-  const [updatedTitle, setUpdatedTitle] = useState('')
-  const [updatedDesc, setUpdatedDesc] = useState('')
-
   useEffect(() => {
     const getPosts = async () => {
       const res = await axios.get(`${BASE_URL}/posts`)

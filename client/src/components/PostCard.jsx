@@ -10,12 +10,13 @@ const BASE_URL = 'http://localhost:3001/api'
 
 const PostCard = (props) => {
   const [edit, setEdit] = useState(false)
-  const newTitle = createRef()
-  const newDescription = createRef()
   const [menu, toggleMenu] = useState(false)
   const [fam, setFam] = useState([])
   const [pic, setPic] = useState('')
   const [togglePics, setTogglePics] = useState(false)
+
+  const newTitle = createRef()
+  const newDescription = createRef()
 
   const showMenu = () => {
     if (menu === false) {
