@@ -31,7 +31,7 @@ const NewPostForm = () => {
         setDescription('')
         setLikes(0)
         setTime('')
-        togglePosted(true)
+        window.location.reload(false)
       })
   }
 

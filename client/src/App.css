@@ -131,7 +131,7 @@ p {
 .post-pic {
   border-radius: 3rem;
   border: #221c42;
-  width: 12%;
+  max-width: 95px;
   min-width: 60px;
   display: flex;
   justify-content: flex-start;
@@ -148,7 +148,7 @@ p {
 }
 
 .post-author-new {
-  margin-bottom: -2.5%;
+  margin-bottom: -1.75%;
   border: none;
 }
 .title-grid {
@@ -262,7 +262,7 @@ canvas {
   height: 100px;
   border: 1pt transparent solid;
   display: block;
-  margin: 25px;
+  margin: 30px;
   border-radius: 2.8rem;
 }
 
@@ -335,7 +335,11 @@ canvas {
 }
 
 .family-tree {
-  background: #7c5a5a;
+  background: url('./buttons/tree-background2.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-size: cover;
+  background-size: 100%;
 }
 
 .tree-text {

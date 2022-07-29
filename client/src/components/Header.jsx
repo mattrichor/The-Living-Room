@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
-import homeicon from '../buttons/homeicon.png'
-import postsicon from '../buttons/postsicon.png'
-import treeicon from '../buttons/treeicon.png'
+import homeicon from '../buttons/homeicon1.png'
+import postsicon from '../buttons/postsicon2.png'
+import treeicon from '../buttons/treeicon1.png'
 
 const Header = () => {
   return (
