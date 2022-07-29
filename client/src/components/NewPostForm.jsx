@@ -49,7 +49,7 @@ const NewPostForm = () => {
           <br></br>
         </div>
         <input
-          className="post-author"
+          className="post-author-new"
           type="text"
           value={author}
           placeholder="Author"

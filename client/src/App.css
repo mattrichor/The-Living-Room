@@ -79,6 +79,7 @@ header {
   background-color: none;
 }
 
+.post-author-new,
 .post-author,
 .time,
 .post-text,
@@ -138,6 +139,7 @@ p {
 }
 
 .post-title,
+.post-author-new,
 .post-author {
   display: flex;
   justify-content: flex-start;
@@ -145,6 +147,10 @@ p {
   text-align: left;
 }
 
+.post-author-new {
+  margin-bottom: -2.5%;
+  border: none;
+}
 .title-grid {
   display: grid;
   grid-template-columns: 8fr 2fr;
