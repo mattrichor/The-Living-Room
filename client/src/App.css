@@ -223,19 +223,6 @@ canvas {
   font-size: x-large;
 }
 
-.tree-gen-button {
-  cursor: pointer;
-  outline: none;
-  border: none;
-  position: absolute;
-  left: 0;
-  bottom: 5%;
-  z-index: 10;
-  left: 50%;
-  transform: translate(-50%, 0);
-  padding: 20px 30px;
-}
-
 .text-form,
 .title-form {
   border: 0;
@@ -328,24 +315,14 @@ canvas {
   text-align: center;
 }
 
-.post-tree {
+.img_wrap {
   max-height: 650px;
   margin-top: 50px;
   position: fixed;
   bottom: 0px;
   left: 66%;
 }
-/* .img_wrap {
-  position: fixed;
-  left: 80%;
-  margin-top: 315px;
-} */
 
-.tree-text {
-  position: fixed;
-  bottom: px;
-  left: 80%;
-}
 .post-tree:hover {
   filter: brightness(120%);
   filter: contrast(120%);
