@@ -5,8 +5,12 @@ const { members, posts } = require('../controllers')
 
 router.get('/', (req, res) => res.send('This is root!'))
 
+//member routes
 router.get('/family', members.getAllFamMemb)
 router.get('/family/:id', members.getMemberById)
+router.post('/family/add', members.addNewMember)
+
+//socialpost routes
 router.get('/posts', posts.getAllPosts)
 router.post('/posts-new', posts.createNewPost)
 router.get('/posts/:id', posts.getPostById)
