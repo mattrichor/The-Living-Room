@@ -11,7 +11,7 @@ const FamilyMember = new Schema(
     proPic: { type: String, required: false },
     about: { type: String, required: false },
     images: { type: Array, required: false },
-    memories: [{ type: Schema.Types.ObjectId, ref: 'Memory' }],
+    memories: { type: Array, required: false },
     children: { type: Array, required: false },
     siblings: { type: Array, required: false },
     partner: { type: Number, required: false },

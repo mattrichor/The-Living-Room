@@ -6,13 +6,13 @@ import NewPostForm from '../components/NewPostForm'
 import tree from '../buttons/tree2.gif'
 import addNote from '../buttons/addnote.png'
 
+import { BASE_URL } from '../services/api'
+
 const Social = () => {
   const [posts, setPosts] = useState([])
   const [newPost, toggleNewPost] = useState(false)
 
   let navigate = useNavigate()
-
-  const BASE_URL = 'http://localhost:3001/api'
 
   return (
     <div>

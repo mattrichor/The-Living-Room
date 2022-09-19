@@ -5,8 +5,7 @@ import axios from 'axios'
 import editIcon from '../buttons/editnote.png'
 import saveIcon from '../buttons/save.png'
 import deleteIcon from '../buttons/deletenote.png'
-
-const BASE_URL = 'http://localhost:3001/api'
+import { BASE_URL } from '../services/api'
 
 const PostCard = (props) => {
   const [edit, setEdit] = useState(false)

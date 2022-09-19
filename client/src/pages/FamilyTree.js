@@ -4,7 +4,7 @@ import { useNavigate, useParams } from 'react-router-dom'
 import axios from 'axios'
 import MemberNode from '../components/MemberNode'
 
-const BASE_URL = 'http://localhost:3001/api'
+import { BASE_URL } from '../services/api'
 
 const FamilyTree = () => {
   const [fam, setFam] = useState([])

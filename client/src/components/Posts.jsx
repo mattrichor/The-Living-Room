@@ -3,7 +3,7 @@ import { useState, useEffect, createRef } from 'react'
 import axios from 'axios'
 import PostCard from './PostCard'
 
-const BASE_URL = 'http://localhost:3001/api'
+import { BASE_URL } from '../services/api'
 
 const Post = () => {
   const [posts, setPosts] = useState([])

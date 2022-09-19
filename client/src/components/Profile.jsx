@@ -4,10 +4,9 @@ import axios from 'axios'
 import PostCard from './PostCard'
 import { useNavigate, useParams } from 'react-router-dom'
 import MemberNode from './MemberNode'
+import { BASE_URL } from '../services/api'
 
 const Profile = () => {
-  const BASE_URL = 'http://localhost:3001/api'
-
   const [fam, setFam] = useState('')
   const [child, setChild] = useState(null)
   const [spouse, setSpouse] = useState(null)
@@ -40,9 +39,8 @@ const Profile = () => {
       setChild(childrens)
       setSpouse(res.data[spouseKey - 1])
     }
-    // if (fam != '') {
+
     getFam()
-    // }
   }, [fam, spouseKey])
 
   return (
@@ -63,7 +61,7 @@ const Profile = () => {
       </div>
       <div className="about">{fam.name != null ? fam.about : ''}</div>
       <ul className="memories">
-        {fam.name != null
+        {fam.name != null && fam.memories
           ? fam.memories.map((memory) => <li>{memory}</li>)
           : ''}
       </ul>

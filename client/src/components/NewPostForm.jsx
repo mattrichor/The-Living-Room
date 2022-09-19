@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import axios from 'axios'
 import addIcon from '../buttons/addnote.png'
+import { BASE_URL } from '../services/api'
 
 const NewPostForm = () => {
   const [title, setTitle] = useState('')
@@ -11,8 +12,6 @@ const NewPostForm = () => {
   const [time, setTime] = useState('')
 
   const [posted, togglePosted] = useState(false)
-
-  const BASE_URL = 'http://localhost:3001/api'
 
   const createNewpost = async (e) => {
     e.preventDefault()
