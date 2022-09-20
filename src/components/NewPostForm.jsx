@@ -1,7 +1,5 @@
-import { useEffect, useState } from 'react'
-import { useNavigate, useParams } from 'react-router-dom'
+import { useState } from 'react'
 import axios from 'axios'
-import addIcon from '../buttons/addnote.png'
 import { BASE_URL } from '../services/api'
 
 const NewPostForm = () => {
@@ -10,8 +8,6 @@ const NewPostForm = () => {
   const [description, setDescription] = useState('')
   const [likes, setLikes] = useState(0)
   const [time, setTime] = useState('')
-
-  const [posted, togglePosted] = useState(false)
 
   const createNewpost = async (e) => {
     e.preventDefault()

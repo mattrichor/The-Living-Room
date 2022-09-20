@@ -1,9 +1,4 @@
 import React from 'react'
-import { useState, useEffect, createRef } from 'react'
-import axios from 'axios'
-import { BASE_URL } from '../services/api'
-
-// const BASE_URL = 'http://localhost:3001/api'
 
 const MemberNode = (props) => {
   return (

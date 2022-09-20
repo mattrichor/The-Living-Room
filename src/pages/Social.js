@@ -1,12 +1,8 @@
-import { useEffect, useState } from 'react'
-import { useNavigate, useParams } from 'react-router-dom'
-import axios from 'axios'
+import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import Posts from '../components/Posts'
 import NewPostForm from '../components/NewPostForm'
 import tree from '../buttons/tree2.gif'
-import addNote from '../buttons/addnote.png'
-
-import { BASE_URL } from '../services/api'
 
 const Social = () => {
   const [posts, setPosts] = useState([])
